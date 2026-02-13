@@ -192,6 +192,7 @@ export const PROJECT_LIST: Project[] = [
         id: 'elemental-soul',
         title: 'ELEMENTAL SOUL',
         subTitle: '로그라이트, 속성-액션 RPG',
+        thumbnailFormat: 'gif',
         links: [
             {
                 type: 'youtube',
@@ -214,11 +215,13 @@ export const PROJECT_LIST: Project[] = [
         id: 'swipe-swipe',
         title: 'Swipe Swipe',
         subTitle: '3D 멀티, 전략, 추리, 청소 게임, PC',
+        thumbnailFormat: 'gif',
     },
     {
         id: 'nutopia',
         title: 'NUTOPIA',
         subTitle: '3인칭 어드벤처',
+        thumbnailFormat: 'gif',
         links: [
             {
                 type: 'github',
@@ -230,6 +233,7 @@ export const PROJECT_LIST: Project[] = [
         id: 'memor',
         title: 'MEMOR',
         subTitle: '2D 스토리 RPG 게임',
+        thumbnailFormat: 'gif',
     },
     {
         id: 'soul-bar',
