@@ -128,11 +128,11 @@ export const ACTIVITY_LIST: Activity[] = [
   },
   {
     id: "10",
-    title: "7기 정기총회",
-    type: "세미나",
-    year: "7기",
-    date: "2024.09.04",
-    description: "매주 진행하는 루덴스 부원간의 세미나",
+    title: "24-1 사막",
+    type: "친목활동",
+    year: "6기",
+    date: "2024.04.05",
+    description: "1년에 1번, 벚꽃과 함께하는 사막",
   },
   {
     id: "9",
