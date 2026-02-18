@@ -24,6 +24,9 @@ function getPlaceText(place: string): string {
   if (place.includes('특별상')) {
     return '💖' + place;
   }
+  if (place.includes('금상')) {
+    return '🟡' + place;
+  }
   return place;
 }
 
