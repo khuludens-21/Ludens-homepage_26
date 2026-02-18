@@ -18,7 +18,7 @@ export default function SponsorSection() {
     return (
         <section className="w-full flex flex-col items-center">
             {/* 후원사 목록 */}
-            <div className="w-fit grid grid-cols-1 gap-x-12 gap-y-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start place-items-center">
                 {SPONSOR_LIST.map((sponsor) => (
                     <SponsorCard key={sponsor.title} {...sponsor}/>
                 ))}
