@@ -262,4 +262,15 @@ export const PROJECT_LIST: Project[] = [
             },
         ],
     },
+    {
+        id : 'xrosscode',
+        title : 'XrossCode',
+        subTitle : '멀티 플레이 격투 게임',
+        links: [
+            {
+                type: 'youtube',
+                href: 'https://www.youtube.com/watch?v=V77kyCWopt4',
+            },
+        ],
+    },
 ];

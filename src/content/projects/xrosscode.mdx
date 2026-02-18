@@ -1,0 +1,95 @@
+---
+id: 'xrosscode'
+title: 'XrossCode'
+subTitle: '멀티 플레이 격투 게임'
+teamMembers: '김규현'
+period: '2025.07 ~ 2025.11'
+techStack: ['Unity']
+thumbnailFormat: 'gif'
+links:
+  - type: 'youtube'
+    href: 'https://youtu.be/V77kyCWopt4'
+extraImages:
+  - '/images/project/xrosscode/1.webp'
+  - '/images/project/xrosscode/2.webp'
+  - '/images/project/xrosscode/3.webp'
+---
+
+<iframe 
+  src="https://www.youtube.com/embed/V77kyCWopt4?autoplay=1&mute=1"
+  title="YouTube video player" 
+  frameBorder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  allowFullScreen
+></iframe>
+
+
+공부는 마음에도 없고 게임만 하던 시절이 있었습니다.
+
+바로바로 초등학교 5학년 저의 모습이었습니다.
+
+당시 Wii 게임으로 있었던 대난투를 친구들과 하는게
+
+어찌나 재미있던지 저를 게임개발자의 꿈으로 이어주었네요.
+
+저는 게임을 만들고 싶었고, 그 도구로 유니티를 선택했습니다.
+
+유니티는 인터넷에 관련 정보가 많았고, 게임 개발 프로젝트를 진행하면서
+
+프로그래밍 실력도 쌓을 수 있는 좋은 기회가 될 것 같았습니다.
+
+제작 기간은 약 4개월을 잡고 시작하였습니다. (약 7월 1일 ~ 11월 28일)
+
+유니티는 C#을 사용하기에 저는 C#부터 공부해야 했습니다.
+
+4달동안에 C#을 마스터하고 유니티로 게임을 
+
+완벽하게 만드는 것은 어려워보였습니다.
+
+그렇지만 저한테는 GPT가 있었기에 ㅎㅎ..
+
+짱친 GPT와 오랜 게임 개발의 여정을 함께했지요.
+
+Unity 공식 사이트, 블로그, 유튜브, Udemy에
+
+올라와 있는 자료들도 보면서 공부했습니다.
+
+또한 멀티플레이 기능은 Photon Fusion 2.0을 사용했는데,,
+
+이는 자료가 많지 않아서 영어 강의를 보았습니다.
+
+대난투라는 게임을 참조해서 XrossCode의 전체적인 틀을 잡았습니다.
+
+그 결과로는 4개의 장면이 필요했습니다.
+
+시작 화면, 캐릭터 선택 화면, 배틀 화면, 엔딩 화면
+
+PC 온라인 멀티플레이가 Wii 대난투와는 다른점이었기에
+
+시작 화면에서 Host가 방을 만들 수 있도록 설계했으며,
+
+캐릭터 선택 화면에서 Server와 Client가
+
+동시에 접속할 수 있도록 설계하였습니다.
+
+게임의 목표는 대난투와 동일하게 상대방 캐릭터를 공격하여
+
+맵 밖으로 밀쳐내 떨어뜨리는 것입니다.
+
+캐릭터는 총 5개를 구현했으며, 각 캐릭터들마다
+
+이동 속도, 공격 속도, 공격 방식, 넉백 등 고유한 특성을 가집니다.
+
+또한 대난투와 같이 여러 공격 방식을 구현했는데
+
+기본 공격과 특수 공격으로 나누어 구현하였습니다.
+
+기본 공격은 공격 속도가 빠르지만 대미지가 약하며
+
+특수 공격은 기본 공격보다 속도가 느리지만 대미지가 강하죠.
+
+각 캐릭터들이 피격 판정이 뜨면 넉백과 함께 대미지를 받게됩니다.
+
+대미지는 누적될수록 더 많은 넉백을 받게 되며 맵 밖으로 나갈
+
+확률이 높아지게 됩니다.
