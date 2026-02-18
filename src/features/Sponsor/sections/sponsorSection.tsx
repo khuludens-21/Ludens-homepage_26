@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { SPONSOR_LIST } from '@/constants/sponsor';
 import SponsorCard from '../components/sponsorCard';
 import Image from 'next/image';
-import cogIcon from '@/assets/icons/cog.png';
+import kogIcon from '@/assets/icons/kog.png';
 
 export default function SponsorSection() {
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,7 +28,7 @@ export default function SponsorSection() {
                 {/* 2. 오른쪽: 코그 이미지 */}
                 <div className="flex justify-center">
                     <Image 
-                        src={cogIcon} 
+                        src={kogIcon} 
                         alt="코그" 
                         className="w-32 h-auto opacity-80" 
                     />
