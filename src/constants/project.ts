@@ -251,4 +251,15 @@ export const PROJECT_LIST: Project[] = [
         title: 'JELLU',
         subTitle: '캐주얼 FPS, 로그라이크, 3인 협동 멀티플레이',
     },
+    {
+        id : 'jeonuchi',
+        title : '전우치',
+        subTitle : '조선 배경의 AAA 액션 RPG 게임',
+        links: [
+            {
+                type: 'steam',
+                href: 'https://store.steampowered.com/app/4137640/Jeon_Woochi/',
+            },
+        ],
+    },
 ];
