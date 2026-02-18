@@ -1,23 +1,14 @@
 // src/features/Project/sections/projectSection.tsx
 "use client";
 
-import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ProjectCard } from "@/features/Project/components/projectCard";
 import { ProjectLink } from "@/types/projectLink";
 import { staggerHalf } from "@/constants/motion";
 import { PROJECT_LIST } from "@/constants/project";
 
-const INITIAL_VISIBLE_PROJECTS = 6;
-
 export default function ProjectSection() {
-  const [visibleProjects, setVisibleProjects] = useState(
-    INITIAL_VISIBLE_PROJECTS
-  );
-
-  const onClickShowMore = () => {
-    setVisibleProjects(PROJECT_LIST.length);
-  };
+  // 처음부터 다 보여줄 것이므로 개수를 제한하던 useState와 함수들을 모두 삭제했습니다.
 
   return (
     <div className="flex flex-col w-full items-center">
@@ -32,7 +23,8 @@ export default function ProjectSection() {
           exit="exit"
           variants={staggerHalf}
         >
-          {PROJECT_LIST.slice(0, visibleProjects).map((project) => (
+          {/* slice 함수를 빼고 PROJECT_LIST 전체를 바로 map으로 뿌려줍니다. */}
+          {PROJECT_LIST.map((project) => (
             <ProjectCard
               id={project.id}
               key={project.id}
@@ -46,14 +38,7 @@ export default function ProjectSection() {
           ))}
         </motion.div>
       </AnimatePresence>
-      {visibleProjects < PROJECT_LIST.length && (
-        <button
-          onClick={onClickShowMore}
-          className="mt-12 py-2.5 px-6 text-base font-semibold rounded-full bg-white text-black"
-        >
-          더보기
-        </button>
-      )}
+      {/* 더보기 버튼 코드도 삭제되었습니다. */}
     </div>
   );
 }
