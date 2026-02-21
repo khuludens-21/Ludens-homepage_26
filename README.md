@@ -67,18 +67,3 @@ src
 +-- utils             # shared utility functions
 ```
 
-<br>
-
-## 📝 Commit Convention
-
-| 태그 | 사용하는 경우 |
-| :--: | :--: |
-| fix: | 버그, 오류 해결 |
-| feat: | 새로운 기능 |
-| add: | feat 이외의 부수적인 코드/라이브러리/에셋 추가 |
-| remove: | 파일 삭제 |
-| refactor: | 내부 로직은 변경 하지 않고 기존의 코드 개선하는 리팩토링 |
-| style: | 코드의 의미 변경 없이 코드 포맷팅, 세미콜론 줄바꿈 등 |
-| design: | UI 변경 |
-| chore: | 빌드 수정, 패키지 매니저 설정 등 기타 |
-| docs: | 문서 개정 |
