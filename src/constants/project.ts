@@ -286,10 +286,4 @@ export const PROJECT_LIST: Project[] = [
             },
         ],
     },
-    {
-        id : 'test',
-        title : 'Test',
-        subTitle : '부제목',
-        
-    },
 ];
