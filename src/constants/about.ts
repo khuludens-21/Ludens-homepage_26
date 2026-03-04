@@ -28,8 +28,8 @@ export const QUANTIFIED_INFO: QuantifiedInfoType[] = [
         unit: '개↑',
     },
     {
-        title: '8, 9기 부원 수',
-        number: 150,
+        title: '10기 부원 수',
+        number: 100,
         unit: '명↑',
     },
 ];
