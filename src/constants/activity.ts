@@ -10,10 +10,18 @@ export type Activity = {
   description: string;
 };
 
-export const YEAR_LIST = ["전체", "9기", "8기", "7기", "6기", "5기"];
+export const YEAR_LIST = ["전체", "10기","9기", "8기", "7기", "6기", "5기"];
 
 // 예시로 언리얼 스터디 항목을 배열 형태로 변경
 export const ACTIVITY_LIST: Activity[] = [
+  {
+    id: "34",
+    title: "10기 개강총회",
+    type: "세미나",
+    year: "10기",
+    date: "2026.03.05",
+    description: "10기 활동 소개 및 필수활동 안내",
+  },
   {
     id: "33",
     title: "겨울방학 백준 챌린지",
