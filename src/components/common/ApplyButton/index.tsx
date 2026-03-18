@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import * as gtag from '@/components/ga/gtag';
 
 type ApplyButtonProps =
@@ -17,13 +18,18 @@ const ApplyButton = ({
     speed = "6s",
     thickness = 1,
 }: ApplyButtonProps) => {
-    // 모달창 열림/닫힘 상태 관리
     const [isModalOpen, setIsModalOpen] = useState(false);
+    
+    // Portal을 안전하게 사용하기 위해 클라이언트(브라우저) 환경인지 확인하는 상태
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
     
     const openModal = () => setIsModalOpen(true);
     const closeModal = () => setIsModalOpen(false);
 
-    // ESC 키 입력 시 모달 닫기
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
             if (e.key === 'Escape') {
@@ -44,7 +50,6 @@ const ApplyButton = ({
         <>
             <button
                 onClick={() => {
-                    // 구글 애널리틱스 이벤트 추적 유지
                     gtag.event("sign_up", {
                         event_category: 'apply_button',
                         event_label: 'apply_button_click',
@@ -76,15 +81,15 @@ const ApplyButton = ({
                 </div>
             </button>
 
-            {/* 지원 마감 안내 모달 창 */}
-            {isModalOpen && (
+            {/* mounted가 true일 때만, 브라우저의 document.body에 모달을 직접 연결(Portal)합니다. */}
+            {isModalOpen && mounted && createPortal(
                 <div 
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm"
-                    onClick={closeModal} // 어두운 배경 클릭 시 닫힘
+                    className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/60 backdrop-blur-sm"
+                    onClick={closeModal}
                 >
                     <div 
                         className="relative w-full max-w-sm p-8 bg-neutral-800 rounded-2xl shadow-2xl text-center flex flex-col items-center cursor-pointer"
-                        onClick={closeModal} // 모달 내부를 클릭해도 닫히도록 설정
+                        onClick={closeModal}
                     >
                         <button 
                             onClick={closeModal} 
@@ -95,11 +100,12 @@ const ApplyButton = ({
                         
                         <h3 className="text-xl font-bold text-white mb-6">지원 안내</h3>
                         <div className="text-gray-200 space-y-2 text-base w-full">
-                            <p>지금은 지원마감되었습니다.</p>
+                            <p>지금은 지원이 마감되었습니다.</p>
                             <p>11기 지원을 기다려주세요.</p>
                         </div>
                     </div>
-                </div>
+                </div>,
+                document.body
             )}
         </>
     );
