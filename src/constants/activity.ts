@@ -16,7 +16,7 @@ export const YEAR_LIST = ["전체", "10기","9기", "8기", "7기", "6기", "5�
 export const ACTIVITY_LIST: Activity[] = [
   {
     id: "35",
-    title: "10기 개강총회",
+    title: "연간 프로젝트 네트워킹 데이",
     type: "세미나",
     year: "10기",
     date: "2026.03.19",
