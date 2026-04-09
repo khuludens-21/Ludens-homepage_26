@@ -1,4 +1,3 @@
-// src/features/Sponsor/sections/sponsorSection.tsx
 "use client";
 
 import { useState } from 'react';
@@ -14,8 +13,12 @@ export default function SponsorSection() {
     return (
         <section className="w-full flex flex-col items-center">
             
-            {/* 후원사 목록: */}
-            <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-12 md:gap-20 mt-8 w-full">
+            {/* 후원사 목록: 
+                - max-w-[1200px]를 추가하여 전체 너비를 제한했습니다.
+                - 이렇게 하면 카드가 4개 배치된 후 공간이 모자라 5번째부터 아랫줄로 넘어가며 2줄이 완성됩니다.
+                - 간격(gap)은 카드 너비를 고려해 gap-8 md:gap-12 정도로 살짝 조절했습니다.
+            */}
+            <div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-8 md:gap-12 mt-8 w-full max-w-[1200px] px-4">
                 {SPONSOR_LIST.map((sponsor) => (
                     <SponsorCard key={sponsor.title} {...sponsor}/>
                 ))}
