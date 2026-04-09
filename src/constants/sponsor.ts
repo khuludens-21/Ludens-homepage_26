@@ -28,7 +28,7 @@ export const SPONSOR_LIST: Sponsor[] = [
     {
         title: '스마일게이트 퓨처랩',
         image: smilegateLogo,
-        link: 'https://futurelab.smilegate.com/',
+        link: 'https://futurelab.center/',
     },
     {
         title: 'KOG',
