@@ -24,7 +24,7 @@ export const ACTIVITY_LIST: Activity[] = [
   },
   {
     id: "46",
-    title: "베터그라운드 멘토링데이",
+    title: "베터그라운드 멘토링 데이",
     type: "행사",
     year: "10기",
     date: "2026.05.30",
