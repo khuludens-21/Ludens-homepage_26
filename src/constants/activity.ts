@@ -14,8 +14,9 @@ export const YEAR_LIST = ["전체", "10기","9기", "8기", "7기", "6기", "5�
 
 // 예시로 언리얼 스터디 항목을 배열 형태로 변경
 export const ACTIVITY_LIST: Activity[] = [
+  
   {
-    id: "51",
+    id: "52",
     title: "베터그라운드 밋업 캠프",
     type: "행사",
     year: "10기",
@@ -23,12 +24,20 @@ export const ACTIVITY_LIST: Activity[] = [
     description: "크래프톤 주최 대학 게임동아리 지원 사업 운영진 모임",
   },
   {
-    id: "50",
+    id: "51",
     title: "연간 프로젝트 중간 발표회",
     type: "세미나",
     year: "10기",
     date: "2026.08.07",
     description: "연간 프로젝트 발표 및 라운드 테이블 세션에서 피드백 진행",
+  },
+  {
+    id: "50",
+    title: "베터그라운드 멘토링",
+    type: "기타",
+    year: "10기",
+    date: "2026.08.03-2026.08.05",
+    description: "베터그라운드 멘토링 프로그램 참여",
   },
   {
     id: "49",
