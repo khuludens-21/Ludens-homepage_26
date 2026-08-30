@@ -14,7 +14,14 @@ export const YEAR_LIST = ["전체", "10기","9기", "8기", "7기", "6기", "5�
 
 // 예시로 언리얼 스터디 항목을 배열 형태로 변경
 export const ACTIVITY_LIST: Activity[] = [
-  
+  {
+    id: "53",
+    title: "언리얼 페스트",
+    type: "행사",
+    year: "10기",
+    date: "2026.08.21",
+    description: "언리얼 페스트 서울 2026 참관",
+  },
   {
     id: "52",
     title: "베터그라운드 밋업 캠프",
